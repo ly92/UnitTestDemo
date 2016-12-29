@@ -49,14 +49,12 @@
 - (void)testPerformanceExample {
     //主要测试代码性能
     [self measureBlock:^{
-        for (int i = 0; i < 1000; i ++) {
-            NSLog(@"123");
-        }
+        
         
     }];
 }
 
-
+/*
 #pragma mark - 自定义测试
 //必须以test开头的函数
 - (void)testMyFuc{
@@ -126,6 +124,6 @@
         }];
     }];
 }
-
+*/
 
 @end

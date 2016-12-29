@@ -16,6 +16,10 @@
 		080D4F551E14B043001EF365 /* TestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4F541E14B043001EF365 /* TestDemoTests.m */; };
 		080D4F601E14B043001EF365 /* TestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4F5F1E14B043001EF365 /* TestDemoUITests.m */; };
 		080D4F7B1E14F44A001EF365 /* icon1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 080D4F7A1E14F44A001EF365 /* icon1.jpeg */; };
+		080D4FAC1E1507F7001EF365 /* TabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4FAB1E1507F7001EF365 /* TabelTests.m */; };
+		080D4FB01E150BE0001EF365 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 080D4FAF1E150BE0001EF365 /* libOCMock.a */; };
+		080D4FB61E151689001EF365 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4FB51E151689001EF365 /* PersonModel.m */; };
+		080D4FB91E151710001EF365 /* PersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4FB81E151710001EF365 /* PersonTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		080D4F5F1E14B043001EF365 /* TestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDemoUITests.m; sourceTree = "<group>"; };
 		080D4F611E14B043001EF365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		080D4F7A1E14F44A001EF365 /* icon1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon1.jpeg; sourceTree = "<group>"; };
+		080D4FAA1E1507F7001EF365 /* TabelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabelTests.h; sourceTree = "<group>"; };
+		080D4FAB1E1507F7001EF365 /* TabelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabelTests.m; sourceTree = "<group>"; };
+		080D4FAF1E150BE0001EF365 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
+		080D4FB41E151689001EF365 /* PersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		080D4FB51E151689001EF365 /* PersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
+		080D4FB81E151710001EF365 /* PersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080D4FB01E150BE0001EF365 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,10 +94,12 @@
 		080D4F2E1E14B043001EF365 = {
 			isa = PBXGroup;
 			children = (
+				080D4FAF1E150BE0001EF365 /* libOCMock.a */,
 				080D4F391E14B043001EF365 /* TestDemo */,
 				080D4F531E14B043001EF365 /* TestDemoTests */,
 				080D4F5E1E14B043001EF365 /* TestDemoUITests */,
 				080D4F381E14B043001EF365 /* Products */,
+				080D4FA31E1504CC001EF365 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +125,8 @@
 				080D4F481E14B043001EF365 /* LaunchScreen.storyboard */,
 				080D4F4B1E14B043001EF365 /* Info.plist */,
 				080D4F3A1E14B043001EF365 /* Supporting Files */,
+				080D4FB41E151689001EF365 /* PersonModel.h */,
+				080D4FB51E151689001EF365 /* PersonModel.m */,
 			);
 			path = TestDemo;
 			sourceTree = "<group>";
@@ -130,6 +145,9 @@
 				080D4F7A1E14F44A001EF365 /* icon1.jpeg */,
 				080D4F541E14B043001EF365 /* TestDemoTests.m */,
 				080D4F561E14B043001EF365 /* Info.plist */,
+				080D4FAA1E1507F7001EF365 /* TabelTests.h */,
+				080D4FAB1E1507F7001EF365 /* TabelTests.m */,
+				080D4FB81E151710001EF365 /* PersonTests.m */,
 			);
 			path = TestDemoTests;
 			sourceTree = "<group>";
@@ -141,6 +159,13 @@
 				080D4F611E14B043001EF365 /* Info.plist */,
 			);
 			path = TestDemoUITests;
+			sourceTree = "<group>";
+		};
+		080D4FA31E1504CC001EF365 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080D4FB61E151689001EF365 /* PersonModel.m in Sources */,
 				080D4F421E14B043001EF365 /* ViewController.m in Sources */,
 				080D4F3F1E14B043001EF365 /* AppDelegate.m in Sources */,
 				080D4F3C1E14B043001EF365 /* main.m in Sources */,
@@ -290,6 +316,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080D4FB91E151710001EF365 /* PersonTests.m in Sources */,
+				080D4FAC1E1507F7001EF365 /* TabelTests.m in Sources */,
 				080D4F551E14B043001EF365 /* TestDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,8 +484,18 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 6QAUH6ZH9B;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
 				INFOPLIST_FILE = TestDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/usr/lib/libOCMock.a",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicsoft.TestDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestDemo.app/TestDemo";
@@ -469,8 +507,18 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 6QAUH6ZH9B;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
 				INFOPLIST_FILE = TestDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/usr/lib/libOCMock.a",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicsoft.TestDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestDemo.app/TestDemo";
