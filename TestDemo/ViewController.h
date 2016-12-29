@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+//测试函数-
+- (int)getNum;
+
 
 
 @end

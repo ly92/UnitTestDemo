@@ -15,6 +15,7 @@
 		080D4F4A1E14B043001EF365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080D4F481E14B043001EF365 /* LaunchScreen.storyboard */; };
 		080D4F551E14B043001EF365 /* TestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4F541E14B043001EF365 /* TestDemoTests.m */; };
 		080D4F601E14B043001EF365 /* TestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4F5F1E14B043001EF365 /* TestDemoUITests.m */; };
+		080D4F7B1E14F44A001EF365 /* icon1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 080D4F7A1E14F44A001EF365 /* icon1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		080D4F5B1E14B043001EF365 /* TestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		080D4F5F1E14B043001EF365 /* TestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDemoUITests.m; sourceTree = "<group>"; };
 		080D4F611E14B043001EF365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		080D4F7A1E14F44A001EF365 /* icon1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		080D4F531E14B043001EF365 /* TestDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				080D4F7A1E14F44A001EF365 /* icon1.jpeg */,
 				080D4F541E14B043001EF365 /* TestDemoTests.m */,
 				080D4F561E14B043001EF365 /* Info.plist */,
 			);
@@ -207,7 +210,7 @@
 				TargetAttributes = {
 					080D4F361E14B043001EF365 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6QAUH6ZH9B;
+						DevelopmentTeam = NBHLFYA79A;
 						ProvisioningStyle = Automatic;
 					};
 					080D4F4F1E14B043001EF365 = {
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080D4F7B1E14F44A001EF365 /* icon1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +429,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6QAUH6ZH9B;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NBHLFYA79A;
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicsoft.TestDemo;
@@ -437,7 +442,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6QAUH6ZH9B;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NBHLFYA79A;
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicsoft.TestDemo;
@@ -514,6 +520,7 @@
 				080D4F661E14B043001EF365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		080D4F671E14B043001EF365 /* Build configuration list for PBXNativeTarget "TestDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				080D4F691E14B043001EF365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		080D4F6A1E14B043001EF365 /* Build configuration list for PBXNativeTarget "TestDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +538,7 @@
 				080D4F6C1E14B043001EF365 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
