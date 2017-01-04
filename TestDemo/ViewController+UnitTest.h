@@ -13,7 +13,4 @@
 
 -(NSInteger)addA:(NSInteger)a b:(NSInteger)b;
 
-
-
-
 @end
