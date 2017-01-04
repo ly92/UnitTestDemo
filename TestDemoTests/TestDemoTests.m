@@ -87,7 +87,7 @@
 }
 
 
-// 异步测试
+// 测试接口
 - (void)testAsynchronousURLConnection {
     
     [self measureBlock:^{
