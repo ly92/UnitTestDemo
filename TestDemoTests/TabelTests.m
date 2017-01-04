@@ -35,7 +35,7 @@
 
 - (void)testControllerReturnsCorrectNumberOfRows
 {
-    XCTAssertEqual(1, [self.VC tableView:self.VC.tableView numberOfRowsInSection:0],@"此处返回得到的行数错误");
+    XCTAssertEqual(3, [self.VC tableView:self.VC.tableView numberOfRowsInSection:0],@"此处返回得到的行数错误");
 }
 
 
@@ -44,10 +44,12 @@
     id mockTable = OCMClassMock([UITableView class]);
     [[[mockTable expect] andReturn:nil] dequeueReusableCellWithIdentifier:@"HappyNewYear"];
     
-    UITableViewCell *cell = [self.VC tableView:mockTable cellForRowAtIndexPath:nil];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:0];
+    
+    UITableViewCell *cell = [self.VC tableView:mockTable cellForRowAtIndexPath:indexPath];
     
     XCTAssertNotNil(cell, @"此处应该返回一个cell");
-    XCTAssertEqualObjects(@"Happy New Year!", cell.textLabel.text, @"返回的字符串错误");
+    XCTAssertEqualObjects(@"x-2", cell.textLabel.text, @"返回的字符串错误");
     
     [mockTable verify];
 }

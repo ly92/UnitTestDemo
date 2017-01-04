@@ -9,7 +9,26 @@
 #import "PersonModel.h"
 
 @implementation PersonModel
-- (NSString *)getPersonName{
-    return @"liyong";
+
+- (instancetype)init{
+    if (self = [super init]){
+        self.name = @"liyong";
+        self.gender = @"男";
+    }
+    return self;
 }
+
+- (NSString *)getPersonName{
+    PersonModel *person = [[PersonModel alloc] init];
+    return person.name;
+}
+
+- (NSString *)changeName:(NSString *)newName{
+    PersonModel *person = [[PersonModel alloc] init];
+    person.name = newName;
+    
+    return person.name;
+}
+
+
 @end

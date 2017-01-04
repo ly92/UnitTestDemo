@@ -11,7 +11,12 @@
 @interface PersonModel : NSObject
 
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *gender;
 
 
 - (NSString *)getPersonName;
+
+- (NSString *)changeName:(NSString *)newName;
+
+
 @end
