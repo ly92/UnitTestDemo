@@ -136,17 +136,24 @@
     
     [self.imageView setImage:[UIImage imageNamed:@"icon1.jpeg"]];
     
-    [self expectationForPredicate:[NSPredicate predicateWithFormat:@"image != nil"]
+    //设置一个期望
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"image != nil"];
+    
+    //若在规定时间内满足期望，则测试成功
+    [self expectationForPredicate:predicate
               evaluatedWithObject:self.imageView
                           handler:nil];
+    
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
 //异步测试，使用expectationForNotification,该方法监听一个通知,如果在规定时间内正确收到通知则测试通过
-- (void)testAsynExample1 {
+- (void)testAsynExampleWithExpectationForNotification {
     
+    //监听通知，在规定时间内受到通知，则测试通过
     [self expectationForNotification:@"监听通知的名称测试" object:nil handler:^BOOL(NSNotification * _Nonnull notification) {
         NSLog(@"请求成功");
+        //做后续处理
         return YES;
     }];
     
@@ -156,10 +163,8 @@
     //测试失败
 //    NSURL *url = [NSURL URLWithString:@"www.baidu.com/"];
 
-    
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
         
         if (data && !error && response) {
             //发送通知

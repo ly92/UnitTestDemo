@@ -54,6 +54,7 @@
     [mockTable verify];
 }
 
+//访问被测试类的私有方法（写一个被测试类的category或着被测试类的子类，声明私有方法，不需要实现）
 -(void)testAdd{
     
     NSInteger num = 100;
