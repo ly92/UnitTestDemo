@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
+#import "SubViewController.h"
+
+
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *tv;
 
 @end
 
@@ -16,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+self.navigationItem.title = @"table";
     
 }
 
@@ -35,13 +39,13 @@
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 4;
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 
@@ -55,7 +59,22 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = @"Happy New Year!";
+    if (indexPath.section == 1){
+        if (indexPath.row == 0){
+            cell.textLabel.text = @"1-0!";
+        }else{
+            cell.textLabel.text = @"1-x";
+        }
+    }else{
+        if (indexPath.row == 2){
+            cell.textLabel.text = @"x-2";
+        }else{
+            cell.textLabel.text = @"x-x";
+        }
+    }
+    
+    
+    
     
     return cell;
 }
@@ -65,7 +84,10 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
+    SubViewController *subVC = [board instantiateViewControllerWithIdentifier:@"SubViewController"];
+    [self.navigationController pushViewController:subVC animated:YES];
     
 }
 
