@@ -39,10 +39,9 @@
 
 //检测登录
 - (void)testLogin{
-    //首先得到tabbar然后从首页开始按照索引找到某一页面
-    XCUIElementQuery *tabBarsQuery = [[XCUIApplication alloc] init].tabBars;
-    [[[[tabBarsQuery childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Item"] elementBoundByIndex:2] tap];
     
+    //首先从tabbars找到“登录”然后点击
+    [[[XCUIApplication alloc] init].tabBars.buttons[@"登录"] tap];
     //获取app
     XCUIApplication *app = [[XCUIApplication alloc] init];
     //在当前页面寻找与“accountTF”有关系的输入框，我测试时发现placeholder写为“accountTF”就可以寻找到
@@ -64,11 +63,10 @@
 
 //列表下拉以及上拉测试
 - (void)testRefresh{
-    
     //获取app
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    //进入tabbar的索引为1的页面
-    [[[[app.tabBars childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Item"] elementBoundByIndex:1] tap];
+    //点击tabbar中“列表”这个
+    [app.tabBars.buttons[@"列表"] tap];
     //获取当前页面的tabble（此页面只有一个table，代码自动生成的）
     XCUIElement *table = [[[[[[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeTable].element;
     
@@ -81,8 +79,8 @@
 - (void)testCellClick{
     //获取app
     XCUIApplication *app = [[XCUIApplication alloc] init];
-    //按照索引“1”找到带有table的页面
-    [[[[app.tabBars childrenMatchingType:XCUIElementTypeButton] matchingIdentifier:@"Item"] elementBoundByIndex:1] tap];
+    //点击tabbar中“列表”这个
+    [app.tabBars.buttons[@"列表"] tap];
     //在当前页面获取table的cell队列
     XCUIElementQuery *tablesQuery = app.tables;
     //点击了第一个cell，此cell有一个标示为“x-x”

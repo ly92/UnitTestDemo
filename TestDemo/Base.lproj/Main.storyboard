@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--VC-->
+        <!--Sub View Controller-->
         <scene sceneID="eM1-HS-qpq">
             <objects>
                 <viewController storyboardIdentifier="SubViewController" id="TWw-sQ-Scz" customClass="SubViewController" sceneMemberID="viewController">
@@ -81,7 +81,6 @@
                             <constraint firstItem="oX8-w7-bTW" firstAttribute="top" secondItem="ncF-pr-hNC" secondAttribute="bottom" constant="20" id="rrd-CU-4Sr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="VC" id="H7r-rW-vkr"/>
                     <navigationItem key="navigationItem" id="uNN-rA-llL"/>
                     <connections>
                         <outlet property="accountTF" destination="ncF-pr-hNC" id="mK0-wN-c0G"/>
@@ -93,11 +92,11 @@
             </objects>
             <point key="canvasLocation" x="910" y="-818"/>
         </scene>
-        <!--Item-->
+        <!--登录-->
         <scene sceneID="1GS-pW-NRO">
             <objects>
                 <navigationController id="mD8-Bo-W1l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vUT-PY-Vbn"/>
+                    <tabBarItem key="tabBarItem" title="登录" id="vUT-PY-Vbn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7yQ-jw-eqo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -110,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="-162" y="-818"/>
         </scene>
-        <!--tabble-->
+        <!--View Controller-->
         <scene sceneID="Jnv-8v-Xef">
             <objects>
                 <tableViewController id="Cu0-zL-sY6" customClass="ViewController" sceneMemberID="viewController">
@@ -133,7 +132,6 @@
                             <outlet property="delegate" destination="Cu0-zL-sY6" id="xIS-hf-TSF"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="tabble" id="3Zd-kb-evo"/>
                     <navigationItem key="navigationItem" id="Vwr-3V-Eui"/>
                     <connections>
                         <outlet property="tv" destination="M1l-Ai-Yed" id="1fh-c6-MO0"/>
@@ -143,11 +141,11 @@
             </objects>
             <point key="canvasLocation" x="910" y="-120"/>
         </scene>
-        <!--Item-->
+        <!--其他-->
         <scene sceneID="cZl-iN-hBx">
             <objects>
                 <navigationController id="ajh-uN-jdz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NmW-kK-dHY"/>
+                    <tabBarItem key="tabBarItem" title="其他" id="NmW-kK-dHY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O0W-Ag-S32">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -200,11 +198,11 @@
             </objects>
             <point key="canvasLocation" x="964" y="699"/>
         </scene>
-        <!--Item-->
+        <!--列表-->
         <scene sceneID="Ugv-04-PzJ">
             <objects>
                 <navigationController id="byn-4V-ezV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1HD-qU-ZPu"/>
+                    <tabBarItem key="tabBarItem" title="列表" id="1HD-qU-ZPu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xxt-M6-H5D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
