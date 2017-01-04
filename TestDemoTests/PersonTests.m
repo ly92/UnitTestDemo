@@ -6,11 +6,11 @@
 //  Copyright © 2016年 aoke. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import "TestDemoCase.h"
 #import "PersonModel.h"
 #import <OCMock/OCMock.h>
 
-@interface PersonTests : XCTestCase
+@interface PersonTests : TestDemoCase
 
 @end
 

@@ -6,11 +6,11 @@
 //  Copyright © 2016年 aoke. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import "TestDemoCase.h"
 #import "ViewController.h"
 #import <OCMock/OCMock.h>
 
-@interface TabelTests : XCTestCase
+@interface TabelTests : TestDemoCase
 @property (nonatomic, strong) ViewController *VC;
 
 @end

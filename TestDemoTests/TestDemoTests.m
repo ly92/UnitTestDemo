@@ -6,12 +6,13 @@
 //  Copyright © 2016年 aoke. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+#import "TestDemoCase.h"
 #import "ViewController.h"
 
-@interface TestDemoTests : XCTestCase
+@interface TestDemoTests : TestDemoCase
 @property (nonatomic, strong) ViewController *VC;
-
+@property (strong, nonatomic) UIButton *button;
+@property (nonatomic, strong) UIImageView *imageView;
 @end
 
 @implementation TestDemoTests
@@ -25,6 +26,9 @@
     //定义
     self.VC = [[ViewController alloc] init];
     
+    self.button = [UIButton new];
+    self.imageView = [UIImageView new];
+    
     
 }
 
@@ -35,6 +39,8 @@
     
     //结束后释放
     self.VC = nil;
+    self.button = nil;
+    self.imageView = nil;
 
     [super tearDown];
 }
@@ -86,8 +92,8 @@
     return newImage;
 }
 
-
-// 测试接口
+//异步测试，有三种方式（expectationWithDescription，expectationForPredicate和expectationForNotification）
+// 测试接口(异步测试)使用expectationWithDescription
 - (void)testAsynchronousURLConnection {
     
     [self measureBlock:^{
@@ -96,9 +102,9 @@
         XCTestExpectation *expectation = [self expectationWithDescription:@"GET Baidu"];
         
         //下面三个地址可以查看测试通过与不通过的区别
-        //    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
+            NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
         //    NSURL *url = [NSURL URLWithString:@"https://ly92.github.io/2016/11/09/Easemob_ly/"];
-        NSURL *url = [NSURL URLWithString:@"https://github.com/ly92/PrivateSpace"];
+//        NSURL *url = [NSURL URLWithString:@"https://github.com/ly92/PrivateSpace"];
         
         NSURLSession *session = [NSURLSession sharedSession];
         NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -118,12 +124,68 @@
         }];
         [task resume];
         
+        
         // 超时后执行
-        [self waitForExpectationsWithTimeout:10 handler:^(NSError * _Nullable error) {
+        [self waitForExpectationsWithCommonTimeoutUsingHandler:^(NSError * _Nullable error) {
             [task cancel];
         }];
     }];
 }
 
+//异步测试，使用expectationForPredicate
+- (void)testThatBackgroundImageChanges {
+    
+//    XCTAssertNil(self.imageView.image);
+//    
+////     [self.button setBackgroundImage:[UIImage imageNamed:@"icon1.jpeg"] forState:UIControlStateNormal];
+////    self.imageView.image = [UIImage imageNamed:@"icon1.jpeg"];
+//    
+//    [self.imageView setImage:[UIImage imageNamed:@"icon1.jpeg"]];
+//    
+////    [self.button setImage:[UIImage imageNamed:@"icon1.jpeg"] forState:UIControlStateNormal];
+//    
+//    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(UIButton  * _Nonnull button, NSDictionary<NSString *,id> * _Nullable bindings) {
+//        return [button backgroundImageForState:UIControlStateNormal] != nil;
+//    }];
+//    
+//    [self expectationForPredicate:[NSPredicate predicateWithFormat:@"image != nil"]
+//              evaluatedWithObject:self.imageView
+//                          handler:nil];
+//    [self waitForExpectationsWithTimeout:10 handler:nil];
+}
+
+//异步测试，使用expectationForNotification,该方法监听一个通知,如果在规定时间内正确收到通知则测试通过
+- (void)testAsynExample1 {
+    
+    [self expectationForNotification:@"监听通知的名称测试" object:nil handler:^BOOL(NSNotification * _Nonnull notification) {
+        NSLog(@"请求成功");
+        return YES;
+    }];
+    
+    //下面2个地址可以查看测试通过与不通过的区别
+    //测试通过
+    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
+    //测试失败
+//    NSURL *url = [NSURL URLWithString:@"www.baidu.com/"];
+
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        
+        if (data && !error && response) {
+            //发送通知
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"监听通知的名称测试" object:nil];
+        }
+        
+    }];
+    [task resume];
+    
+    //设置延迟多少秒后，如果没有满足测试条件就报错
+    [self waitForExpectationsWithCommonTimeoutUsingHandler:^(NSError * _Nullable error) {
+        [task cancel];
+    }];
+    
+}
 
 @end
