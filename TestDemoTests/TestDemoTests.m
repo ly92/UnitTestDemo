@@ -132,23 +132,14 @@
 //异步测试，使用expectationForPredicate
 - (void)testThatBackgroundImageChanges {
     
-//    XCTAssertNil(self.imageView.image);
-//    
-////     [self.button setBackgroundImage:[UIImage imageNamed:@"icon1.jpeg"] forState:UIControlStateNormal];
-////    self.imageView.image = [UIImage imageNamed:@"icon1.jpeg"];
-//    
-//    [self.imageView setImage:[UIImage imageNamed:@"icon1.jpeg"]];
-//    
-////    [self.button setImage:[UIImage imageNamed:@"icon1.jpeg"] forState:UIControlStateNormal];
-//    
-//    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(UIButton  * _Nonnull button, NSDictionary<NSString *,id> * _Nullable bindings) {
-//        return [button backgroundImageForState:UIControlStateNormal] != nil;
-//    }];
-//    
-//    [self expectationForPredicate:[NSPredicate predicateWithFormat:@"image != nil"]
-//              evaluatedWithObject:self.imageView
-//                          handler:nil];
-//    [self waitForExpectationsWithTimeout:10 handler:nil];
+    XCTAssertNil(self.imageView.image);
+    
+    [self.imageView setImage:[UIImage imageNamed:@"icon1.jpeg"]];
+    
+    [self expectationForPredicate:[NSPredicate predicateWithFormat:@"image != nil"]
+              evaluatedWithObject:self.imageView
+                          handler:nil];
+    [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
 //异步测试，使用expectationForNotification,该方法监听一个通知,如果在规定时间内正确收到通知则测试通过

@@ -7,7 +7,7 @@
 //
 
 #import "TabelTests.h"
-
+#import "ViewController+UnitTest.h"
 @implementation TabelTests
 
 /**
@@ -53,4 +53,12 @@
     
     [mockTable verify];
 }
+
+-(void)testAdd{
+    
+    NSInteger num = 100;
+    
+    XCTAssertEqual(num, [self.VC addA:30 b:70],@"不相等");
+}
+
 @end

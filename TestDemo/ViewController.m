@@ -79,7 +79,6 @@ self.navigationItem.title = @"table";
     return cell;
 }
 
-
 #pragma mark -
 #pragma mark Table view delegate
 
@@ -89,6 +88,11 @@ self.navigationItem.title = @"table";
     SubViewController *subVC = [board instantiateViewControllerWithIdentifier:@"SubViewController"];
     [self.navigationController pushViewController:subVC animated:YES];
     
+}
+
+//私有方法
+-(NSInteger)addA:(NSInteger)a b:(NSInteger)b{
+    return a+b;
 }
 
 

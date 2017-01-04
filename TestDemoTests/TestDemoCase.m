@@ -13,7 +13,7 @@
 
 - (void)setUp {
     [super setUp];
-    self.networkTimeout = 20.0;
+    self.networkTimeout = 10.0;
 }
 
 - (void)tearDown {
