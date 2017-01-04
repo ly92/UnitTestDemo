@@ -129,8 +129,8 @@
     }];
 }
 
-//异步测试，使用expectationForPredicate
-- (void)testThatBackgroundImageChanges {
+//异步测试，使用expectationForPredicate,设置一个期望，在规定时间内满足期望则测试通过
+- (void)testAsynExampleWithExpectationForPredicate {
     
     XCTAssertNil(self.imageView.image);
     
@@ -144,7 +144,8 @@
               evaluatedWithObject:self.imageView
                           handler:nil];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithCommonTimeout];
+    
 }
 
 //异步测试，使用expectationForNotification,该方法监听一个通知,如果在规定时间内正确收到通知则测试通过
