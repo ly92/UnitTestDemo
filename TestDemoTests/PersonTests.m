@@ -73,21 +73,17 @@
     OCMStub([mockClass changeName:[OCMArg checkWithBlock:^BOOL(id obj) {
         //判断参数是否为NSString类型
         if ([obj isKindOfClass:[NSString class]]){
-            
         }else{
             //提示错误
 //            XCTAssertFalse(obj);
             
             obj = @"456";
         }
-        
         NSLog(@"-----------------%@",obj);
-        
         return YES;
     }]]);
     
     [mockClass changeName:@"123"];
-    
     [mockClass changeName:[OCMArg any]];
 }
 

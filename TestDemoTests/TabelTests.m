@@ -32,13 +32,13 @@
 }
 
 
-
+//测试table数据源函数返回行数
 - (void)testControllerReturnsCorrectNumberOfRows
 {
     XCTAssertEqual(3, [self.VC tableView:self.VC.tableView numberOfRowsInSection:0],@"此处返回得到的行数错误");
 }
 
-
+//测试table数据源函数返回cell
 - (void)testControllerSetsUpCellCorrectly
 {
     id mockTable = OCMClassMock([UITableView class]);

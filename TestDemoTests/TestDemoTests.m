@@ -95,12 +95,9 @@
 //异步测试，有三种方式（expectationWithDescription，expectationForPredicate和expectationForNotification）
 // 测试接口(异步测试)使用expectationWithDescription
 - (void)testAsynchronousURLConnection {
-    
     [self measureBlock:^{
-        
         NSLog(@"testAsynchronousURLConnection");
         XCTestExpectation *expectation = [self expectationWithDescription:@"GET Baidu"];
-        
         //下面三个地址可以查看测试通过与不通过的区别
             NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
         //    NSURL *url = [NSURL URLWithString:@"https://ly92.github.io/2016/11/09/Easemob_ly/"];

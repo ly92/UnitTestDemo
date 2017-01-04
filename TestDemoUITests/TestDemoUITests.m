@@ -75,7 +75,7 @@
     [table swipeUp];//上拉
 }
 
-
+//tablecell点击以及返回
 - (void)testCellClick{
     //获取app
     XCUIApplication *app = [[XCUIApplication alloc] init];
