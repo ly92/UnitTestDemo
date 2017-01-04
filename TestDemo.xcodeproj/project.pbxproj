@@ -73,6 +73,7 @@
 		08ED5B9D1E1C96D900FCC1DC /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
 		12C5ADB51E1CE7A100F44623 /* TestDemoCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDemoCase.h; sourceTree = "<group>"; };
 		12C5ADB61E1CE7A100F44623 /* TestDemoCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDemoCase.m; sourceTree = "<group>"; };
+		12C5ADB91E1CF8DD00F44623 /* ViewController+UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewController+UnitTest.h"; path = "../../TestDemo/ViewController+UnitTest.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +155,7 @@
 		080D4F531E14B043001EF365 /* TestDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				12C5ADBC1E1CF9CF00F44623 /* Extension */,
 				12C5ADB81E1CE82800F44623 /* unitTest */,
 				080D4F7A1E14F44A001EF365 /* icon1.jpeg */,
 				080D4F561E14B043001EF365 /* Info.plist */,
@@ -188,6 +190,14 @@
 				080D4F541E14B043001EF365 /* TestDemoTests.m */,
 			);
 			name = unitTest;
+			sourceTree = "<group>";
+		};
+		12C5ADBC1E1CF9CF00F44623 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				12C5ADB91E1CF8DD00F44623 /* ViewController+UnitTest.h */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +526,7 @@
 				DEVELOPMENT_TEAM = 6QAUH6ZH9B;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
 				INFOPLIST_FILE = TestDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -539,6 +550,7 @@
 				DEVELOPMENT_TEAM = 6QAUH6ZH9B;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
 				INFOPLIST_FILE = TestDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,6 +572,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6QAUH6ZH9B;
 				INFOPLIST_FILE = TestDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicsoft.TestDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -572,6 +585,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6QAUH6ZH9B;
 				INFOPLIST_FILE = TestDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicsoft.TestDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
