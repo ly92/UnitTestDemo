@@ -73,7 +73,6 @@
 		08ED5B9D1E1C96D900FCC1DC /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
 		12C5ADB51E1CE7A100F44623 /* TestDemoCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDemoCase.h; sourceTree = "<group>"; };
 		12C5ADB61E1CE7A100F44623 /* TestDemoCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDemoCase.m; sourceTree = "<group>"; };
-		12C5ADB91E1CF8DD00F44623 /* ViewController+UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ViewController+UnitTest.h"; path = "../../TestDemo/ViewController+UnitTest.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +194,6 @@
 		12C5ADBC1E1CF9CF00F44623 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				12C5ADB91E1CF8DD00F44623 /* ViewController+UnitTest.h */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
