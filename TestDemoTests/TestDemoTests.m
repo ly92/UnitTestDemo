@@ -72,7 +72,7 @@
 
 //测试图片处理
 - (void)testImageResize{
-    UIImage *image = [UIImage imageNamed:@"icon1.jpeg"];
+    UIImage *image = [UIImage imageNamed:@"icon2"];
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
         for (NSInteger i=0; i<10000; i++) {
@@ -99,9 +99,7 @@
         NSLog(@"testAsynchronousURLConnection");
         XCTestExpectation *expectation = [self expectationWithDescription:@"GET Baidu"];
         //下面三个地址可以查看测试通过与不通过的区别
-            NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
-        //    NSURL *url = [NSURL URLWithString:@"https://ly92.github.io/2016/11/09/Easemob_ly/"];
-//        NSURL *url = [NSURL URLWithString:@"https://github.com/ly92/PrivateSpace"];
+        NSURL *url = [NSURL URLWithString:@"https://www.baidu.com/"];
         
         NSURLSession *session = [NSURLSession sharedSession];
         NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -121,7 +119,6 @@
         }];
         [task resume];
         
-        
         // 超时后执行
         [self waitForExpectationsWithCommonTimeoutUsingHandler:^(NSError * _Nullable error) {
             [task cancel];
@@ -134,11 +131,10 @@
     
     XCTAssertNil(self.imageView.image);
     
-    [self.imageView setImage:[UIImage imageNamed:@"icon1.jpeg"]];
+    self.imageView.image = [UIImage imageNamed:@"icon2"];
     
     //设置一个期望
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"image != nil"];
-    
     //若在规定时间内满足期望，则测试成功
     [self expectationForPredicate:predicate
               evaluatedWithObject:self.imageView
@@ -160,7 +156,7 @@
     
     //下面2个地址可以查看测试通过与不通过的区别
     //测试通过
-    NSURL *url = [NSURL URLWithString:@"http://www.baidu.com/"];
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com/"];
     //测试失败
 //    NSURL *url = [NSURL URLWithString:@"www.baidu.com/"];
 
@@ -174,7 +170,6 @@
         
     }];
     [task resume];
-    
     //设置延迟多少秒后，如果没有满足测试条件就报错
     [self waitForExpectationsWithCommonTimeoutUsingHandler:^(NSError * _Nullable error) {
         [task cancel];

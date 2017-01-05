@@ -15,7 +15,6 @@
 		080D4F4A1E14B043001EF365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080D4F481E14B043001EF365 /* LaunchScreen.storyboard */; };
 		080D4F551E14B043001EF365 /* TestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4F541E14B043001EF365 /* TestDemoTests.m */; };
 		080D4F601E14B043001EF365 /* TestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4F5F1E14B043001EF365 /* TestDemoUITests.m */; };
-		080D4F7B1E14F44A001EF365 /* icon1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 080D4F7A1E14F44A001EF365 /* icon1.jpeg */; };
 		080D4FAC1E1507F7001EF365 /* TabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4FAB1E1507F7001EF365 /* TabelTests.m */; };
 		080D4FB01E150BE0001EF365 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 080D4FAF1E150BE0001EF365 /* libOCMock.a */; };
 		080D4FB61E151689001EF365 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 080D4FB51E151689001EF365 /* PersonModel.m */; };
@@ -25,6 +24,9 @@
 		08ED5BA01E1C96E000FCC1DC /* SubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08ED5B9D1E1C96D900FCC1DC /* SubViewController.m */; };
 		08ED5BA11E1C9A5600FCC1DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080D4F431E14B043001EF365 /* Main.storyboard */; };
 		08ED5BA21E1C9A5700FCC1DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080D4F431E14B043001EF365 /* Main.storyboard */; };
+		08ED5BA61E1DF16400FCC1DC /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08ED5BA51E1DF16400FCC1DC /* icon2.png */; };
+		08ED5BA71E1E1F1F00FCC1DC /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08ED5BA51E1DF16400FCC1DC /* icon2.png */; };
+		08ED5BA81E1E1F2000FCC1DC /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08ED5BA51E1DF16400FCC1DC /* icon2.png */; };
 		12C5ADB71E1CE7A100F44623 /* TestDemoCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C5ADB61E1CE7A100F44623 /* TestDemoCase.m */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +64,6 @@
 		080D4F5B1E14B043001EF365 /* TestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		080D4F5F1E14B043001EF365 /* TestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestDemoUITests.m; sourceTree = "<group>"; };
 		080D4F611E14B043001EF365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		080D4F7A1E14F44A001EF365 /* icon1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon1.jpeg; sourceTree = "<group>"; };
 		080D4FAA1E1507F7001EF365 /* TabelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabelTests.h; sourceTree = "<group>"; };
 		080D4FAB1E1507F7001EF365 /* TabelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabelTests.m; sourceTree = "<group>"; };
 		080D4FAF1E150BE0001EF365 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		080D4FB81E151710001EF365 /* PersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTests.m; sourceTree = "<group>"; };
 		08ED5B9C1E1C96D900FCC1DC /* SubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubViewController.h; sourceTree = "<group>"; };
 		08ED5B9D1E1C96D900FCC1DC /* SubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubViewController.m; sourceTree = "<group>"; };
+		08ED5BA51E1DF16400FCC1DC /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		12C5ADB51E1CE7A100F44623 /* TestDemoCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDemoCase.h; sourceTree = "<group>"; };
 		12C5ADB61E1CE7A100F44623 /* TestDemoCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDemoCase.m; sourceTree = "<group>"; };
 		12C5ADBD1E1D067600F44623 /* ViewController+UnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+UnitTest.h"; sourceTree = "<group>"; };
@@ -157,7 +159,7 @@
 			children = (
 				12C5ADBC1E1CF9CF00F44623 /* Extension */,
 				12C5ADB81E1CE82800F44623 /* unitTest */,
-				080D4F7A1E14F44A001EF365 /* icon1.jpeg */,
+				08ED5BA51E1DF16400FCC1DC /* icon2.png */,
 				080D4F561E14B043001EF365 /* Info.plist */,
 				12C5ADB51E1CE7A100F44623 /* TestDemoCase.h */,
 				12C5ADB61E1CE7A100F44623 /* TestDemoCase.m */,
@@ -312,6 +314,7 @@
 				080D4F4A1E14B043001EF365 /* LaunchScreen.storyboard in Resources */,
 				080D4F471E14B043001EF365 /* Assets.xcassets in Resources */,
 				080D4F451E14B043001EF365 /* Main.storyboard in Resources */,
+				08ED5BA71E1E1F1F00FCC1DC /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				080D4F7B1E14F44A001EF365 /* icon1.jpeg in Resources */,
+				08ED5BA61E1DF16400FCC1DC /* icon2.png in Resources */,
 				08ED5BA11E1C9A5600FCC1DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08ED5BA21E1C9A5700FCC1DC /* Main.storyboard in Resources */,
+				08ED5BA81E1E1F2000FCC1DC /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
