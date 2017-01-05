@@ -28,6 +28,11 @@ self.navigationItem.title = @"table";
     return 100;
 }
 
+- (NSString *)privateFuc{
+    
+    return @"123456";
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

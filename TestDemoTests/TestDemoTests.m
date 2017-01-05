@@ -15,6 +15,11 @@
 @property (nonatomic, strong) UIImageView *imageView;
 @end
 
+//测试ViewController的私有方法-通过分类的方式
+@interface ViewController (TestDemoTests)
+- (NSString *)privateFuc;
+@end
+
 @implementation TestDemoTests
 /**
  *  每个test方法执行之前调用
@@ -49,6 +54,10 @@
  */
 - (void)testExample {
     //测试view是否加载出来
+    
+    //测试私有方法
+    XCTAssertEqualObjects(self.VC.privateFuc, @"123456",@"");
+    
     XCTAssertNotNil(self.VC.view,@"view未成功加载出来");
 }
 
