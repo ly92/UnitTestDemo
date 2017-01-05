@@ -23,11 +23,12 @@
 self.navigationItem.title = @"table";
     
 }
-
+//公共方法
 - (int)getNum{
     return 100;
 }
 
+//私有方法
 - (NSString *)privateFuc{
     
     return @"123456";
