@@ -38,10 +38,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)loginAction {
-    
-    
-    
-    
+
     NSString *account = self.accountTF.text;
     NSString *pwd = self.passwordTF.text;
     
