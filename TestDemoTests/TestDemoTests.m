@@ -83,14 +83,21 @@
 - (void)testImageResize{
     UIImage *image = [UIImage imageNamed:@"icon2"];
     [self measureBlock:^{
+        
+        NSTimeInterval start = CACurrentMediaTime();
+        
+        
         // Put the code you want to measure the time of here.
-        for (NSInteger i=0; i<10000; i++) {
+        for (NSInteger i=0; i<100; i++) {
             UIImage *resizedImage = [self imageWithImage:image scaledToSize:CGSizeMake(100, 100)];
             XCTAssertNotNil(resizedImage, @"缩放后图片不应为nil");
             CGFloat resizedWidth = resizedImage.size.width;
             CGFloat resizedHeight = resizedImage.size.height;
             XCTAssertTrue(resizedWidth == 100 && resizedHeight == 100, @"缩放后尺寸");
         }
+        
+        NSLog(@"----------%lf",CACurrentMediaTime() - start);
+        
     }];
 }
 - (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
